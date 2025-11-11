@@ -19,58 +19,58 @@ jobs:
       uses: dev-shimada/ecs-tag-shift-action@main
       with:
         mode: "task"
-        file: "test1/input/task-definition.json"
+        file: "tests/test1/input/task-definition.json"
         container: "web"
         tag: "v2.0.0"
     - name: assert test1
-      run: diff test1/expected/task-definition.json test1/input/task-definition.json
+      run: diff tests/test1/expected/task-definition.json tests/test1/input/task-definition.json
 
     - name: test2
       uses: dev-shimada/ecs-tag-shift-action@main
       with:
         mode: "task"
-        file: "test2/input/task-definition.jsonc"
+        file: "tests/test2/input/task-definition.jsonc"
         container: "web"
         tag: "v2.0.0"
     - name: assert test2
-      run: diff test2/expected/task-definition.jsonc test2/input/task-definition.jsonc
+      run: diff tests/test2/expected/task-definition.jsonc tests/test2/input/task-definition.jsonc
     
     - name: test3
       uses: dev-shimada/ecs-tag-shift-action@main
       with:
         mode: "task"
-        file: "test3/input/container-definitions.json"
+        file: "tests/test3/input/container-definitions.json"
         container: "web"
         tag: "v2.0.0"
     - name: assert test3
-      run: diff test3/expected/container-definitions.json test3/input/container-definitions.json
+      run: diff tests/test3/expected/container-definitions.json tests/test3/input/container-definitions.json
 
     - name: test4
       uses: dev-shimada/ecs-tag-shift-action@main
       with:
         mode: "task"
-        file: "test4/input/task-definition.json"
+        file: "tests/test4/input/task-definition.json"
         tag: "v2.0.0"
     - name: assert test4
-      run: diff test4/expected/task-definition.json test4/input/task-definition.json
+      run: diff tests/test4/expected/task-definition.json tests/test4/input/task-definition.json
 
     - name: test5
       uses: dev-shimada/ecs-tag-shift-action@main
       with:
         mode: "task"
-        file: "test5/input/task-definition.json"
+        file: "tests/test5/input/task-definition.json"
         image: "nginx"
         tag: "v2.0.0"
     - name: assert test5
-      run: diff test5/expected/task-definition.json test5/input/task-definition.json
+      run: diff tests/test5/expected/task-definition.json tests/test5/input/task-definition.json
 
     - name: test6
       uses: dev-shimada/ecs-tag-shift-action@main
       with:
         mode: "task"
-        file: "test6/input/task-definition.json"
+        file: "tests/test6/input/task-definition.json"
         image: "nginx"
         container: "web"
         tag: "v2.0.0"
     - name: assert test6
-      run: diff test6/expected/task-definition.json test6/input/task-definition.json
+      run: diff tests/test6/expected/task-definition.json tests/test6/input/task-definition.json
