@@ -38,7 +38,7 @@ jobs:
     - name: test3
       uses: dev-shimada/ecs-tag-shift-action@main
       with:
-        mode: "task"
+        mode: "container"
         file: "tests/test3/input/container-definitions.json"
         container: "web"
         tag: "v2.0.0"
